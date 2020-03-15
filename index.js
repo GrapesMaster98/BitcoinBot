@@ -7,7 +7,7 @@ client.once('ready', () => {
 
     client.user.setPresence({
       activity: {
-        name: 'play.bitcoinmc.net | b!help',
+        name: 'b!help',
         type: 'PLAYING'
       },
       status: 'online'
