@@ -7,10 +7,10 @@ client.once('ready', () => {
 
     client.user.setPresence({
       activity: {
-        name: 'OwO No me leas culero.',
+        name: 'play.bitcoinmc.net | b!help',
         type: 'PLAYING'
       },
-      status: 'dnd'
+      status: 'online'
     });
 });
 
@@ -73,6 +73,23 @@ client.on('message', async message => {
       .setColor('RANDOM');
       
       message.channel.send(embed);
+    }
+    
+    if(command === 'help') {
+        const embed = new Discord.MessageEmbed()
+        .setTitle('Ayuda BitcoinBot')
+        .setDescription('Mis comandos, por favor, usalos en el canal correcto')
+        .setThumbnail(client.user.displayAvatarURL())
+        .addField('**b!redes**', 'Manda las redes del servidor.', false)
+        .addField('**b!sugerencia**', 'Sugiere algo para el servidor.', false)
+        .addField('**b!ip**', 'Manda la IP del servidor.', false)
+        .setColor('RANDOM');
+        
+        message.channel.send(embed);
+    }
+    
+    if(command === 'ip') {
+        message.channel.send('**play.bitcoinmc.net** | ¡Te esperamos!');
     }
 });
 
