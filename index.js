@@ -89,7 +89,7 @@ client.on('message', async message => {
     }
     
     if(command === 'ip') {
-        message.channel.send('**play.bitcoinmc.net** | ¡Te esperamos!');
+        message.channel.send('En mantenimiento...');
     }
 });
 
